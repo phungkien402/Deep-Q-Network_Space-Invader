@@ -1,0 +1,49 @@
+# ===================================
+# DQN Space Invaders - Requirements
+# For NVIDIA Grid P40 (24GB VRAM) + 48GB RAM
+# Tested and working on Windows Server with CUDA 12.0
+# ===================================
+
+# Deep Learning Framework (install first with CUDA support)
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+torch>=2.2.0
+torchvision>=0.17.0
+torchaudio>=2.2.0
+
+# Gymnasium & Atari Environment
+gymnasium[atari]==0.29.1           # RL environment framework
+gymnasium[accept-rom-license]      # Auto-download Atari ROMs
+ale-py==0.8.1                      # Arcade Learning Environment (stable version)
+autorom[accept-rom-license]        # ROM management
+
+# Numerical Computing
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Image Processing
+pillow>=10.0.0
+opencv-python>=4.8.0
+
+# Training Utilities
+tqdm>=4.66.0
+tensorboard>=2.14.0
+
+# Optional
+pandas>=2.0.0
+
+# ===================================
+# Installation Notes:
+# ===================================
+# 1. Install CUDA Toolkit 12.x first from NVIDIA
+# 2. Verify CUDA: nvidia-smi
+# 3. Install packages: pip install -r requirements.txt
+# 4. Verify PyTorch CUDA: python -c "import torch; print(torch.cuda.is_available())"
+#
+# For specific PyTorch+CUDA version:
+# Visit: https://pytorch.org/get-started/locally/
+# Example for CUDA 12.1:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
